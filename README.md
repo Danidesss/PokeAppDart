@@ -39,3 +39,4 @@ El estado del juego se guarda automáticamente cada vez que sales del juego. Cua
 ## Créditos
 
 Este juego fue creado por Daniel lepizma.
+pene teta culo
