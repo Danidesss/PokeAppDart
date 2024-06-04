@@ -11,13 +11,13 @@ class ApiPokemonDataSourceImpl extends PokemonDataSource {
       'https://pokeapi.co/api/v2/pokemon/ditto',
     );
 
-    final ditto = Pokemon(
-      hp: response.data['stats'][0]['base_stat'],
-      type: response.data['types'][0]['type']['name'],
-      name: response.data['forms'][0]['name'],
-      pokemonLevel: 0,
-      xpForNextLevel: 0,
-    );
-    return [ditto];
+    final List<Pokemon> pokemons = [];
+    for (var json in response.data['moves']) {
+      pokemons.add(Pokemon.fromJson(json));
+    }
+    return pokemons;
+
+   
+
   }
 }
