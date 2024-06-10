@@ -1,5 +1,5 @@
 import '../domain.dart';
 
 abstract class PokemonDataSource {
-  Future<List<Pokemon>> fetchPokemon();
+  Future<List<Pokemon>> fetchPokemons();
 }

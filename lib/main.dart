@@ -3,7 +3,7 @@ import 'domain/domain.dart';
 
 void main() {
   final Game pokeApp = Game(
-    initialTrainerEnergy: 20,
+    initialTrainerEnergy: 300,
     initialPokeballs: 5,
     name: 'PokeApp',
   );

@@ -23,7 +23,7 @@ final List<Pokemon> wildPokemon = [
 
 class MockPokemonDatasourceImpl extends PokemonDataSource {
   @override
-  Future<List<Pokemon>> fetchPokemon() async {
+  Future<List<Pokemon>> fetchPokemons() async {
     return wildPokemon;
   }
 }

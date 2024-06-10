@@ -17,17 +17,15 @@ class Trainer {
     required this.pokemonsCaught,
   });
 
-  void travel() async {
+  Future<void> travel() async {
     final PokemonDataSource realPokemon = ApiPokemonDataSourceImpl();
     final repository = PokemonRepositoryImpl(dataSource: realPokemon);
     final List<Pokemon> pokemons = await repository.loadPokemons();
-    print('me ejecute papu');
-    print(pokemons);
 
     if (pokemons.isNotEmpty) {
       energyLeft -= 5;
       final Logger logger = Logger(appName: 'PokeApp');
-      logger.log(energyLeft.toString());
+      logger.log('Energia Restante = $energyLeft');
 
       // Genera un índice aleatorio basado en el tamaño de la lista de pokemons
       var rng = Random();

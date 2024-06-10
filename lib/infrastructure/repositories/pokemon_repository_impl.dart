@@ -7,6 +7,6 @@ class PokemonRepositoryImpl extends PokemonRepository {
 
   @override
   Future<List<Pokemon>> loadPokemons() {
-    return dataSource.fetchPokemon();
+    return dataSource.fetchPokemons();
   }
 }

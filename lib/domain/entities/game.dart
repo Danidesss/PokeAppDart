@@ -32,11 +32,15 @@ class Game {
     initGameLoop(trainer: danieldesu);
   }
 
-  void initGameLoop({required Trainer trainer}) {
+  void initGameLoop({required Trainer trainer}) async {
     final Logger logger = Logger(appName: name);
     while (trainer.energyLeft > 0) {
-      trainer.travel();
+      await trainer.travel();
     }
+
+    logger.log('Puntajeperosinlaweaquecree: ${trainer.pokemonTeam.length}');
+    logger.log('Puntaje: ${trainer.pokemonsCaught}');
+    logger.log('Tu mierdi Equipo: ${trainer.pokemonTeam}');
     logger.log('Fin del semen');
   }
 }
